@@ -1,0 +1,103 @@
+/* Body styling for centering */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  height: 100vh; /* Take full viewport height */
+  margin: 0;
+  padding: 0;
+  font-family: "Dancing Script", cursive;
+  text-align: center; /* Center the text inside the body */
+}
+
+/* Center the buttons */
+div > div {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  gap: 15px; /* Add space between the buttons */
+  margin-top: 20px; /* Space between the header and buttons */
+}
+
+/* Header style */
+header {
+  font-size: 2.5em;
+  color: crimson;
+  margin-bottom: 10px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+#yesButton {
+  background-color: white;
+  color: black;
+}
+
+#yesButton:hover {
+  background-color: green;
+  transition: 0.2s;
+}
+
+#noButton {
+  background-color: white;
+  color: black;
+}
+
+#noButton:hover {
+  background-color: darkred;
+  transition: 0.2s;
+}
+
+/* Image styling */
+img {
+  max-width: 300px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* Background with gradient animation */
+@keyframes gradientAnimation {
+  0% {
+    background: #ff7f7f;
+  }
+  50% {
+    background: #ffb6b6;
+  }
+  100% {
+    background: #ff7f7f;
+  }
+}
+
+body {
+  background: linear-gradient(45deg, #ff7f7f, #ffb6b6);
+  animation: gradientAnimation 10s ease infinite;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  header {
+    font-size: 2em; /* Smaller header for mobile */
+  }
+
+  button {
+    font-size: 0.8em; /* Slightly smaller buttons */
+    padding: 8px 15px; /* Adjust button size */
+  }
+
+  /* Adjust the size of the "Yes" button as it grows */
+  #yesButton {
+    font-size: calc(1em + 2vw); /* Make the font size responsive */
+  }
+
+  img {
+    max-width: 90%; /* Make sure the image takes up less space on mobile */
+    max-height: 250px; /* Adjust height of image on mobile */
+  }
+}
